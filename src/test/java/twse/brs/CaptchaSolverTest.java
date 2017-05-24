@@ -25,6 +25,9 @@
 
 package twse.brs;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -40,6 +43,12 @@ public class CaptchaSolverTest {
     public void testCaptchaSolver() {
         CaptchaSolver cs = new CaptchaSolver();
 
-        assertThat("KZ4YP", is(equalTo(cs.solve(this.getClass().getClassLoader().getResource("KZ4YP.png").getPath()))));
+        List<String> captchaList = new ArrayList<String>();
+        captchaList.add("KZ4YP");
+
+        for(String captcha: captchaList) {
+            assertThat(captcha,
+                       is(equalTo(cs.solve(this.getClass().getClassLoader().getResource(captcha + ".png").getPath()))));
+        }
     }
 }
