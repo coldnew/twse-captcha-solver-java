@@ -5,6 +5,8 @@ A simple captcha solver for Taiwan Stock Exchange's [website](http://bsr.twse.co
 
 This project is written in Java, if you want C++ version, you can take a look at [coldnew/twse-captcha-solver](https://github.com/coldnew/twse-captcha-solver).
 
+If you want a more accurate captcha solver based on [deeplearning4j](https://deeplearning4j.org/), you can see my another project: [coldnew/twse-captcha-solver-dl4j](https://github.com/coldnew/twse-captcha-solver-dl4j).
+
 ## Usage
 
 You need to download the captcha image manually from [website](http://bsr.twse.com.tw/bshtm/), execute the tool in command line:
